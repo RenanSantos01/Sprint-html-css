@@ -10,7 +10,11 @@
 <body>
     <header>
         <div class="container">
-            <img src="img/ford-96.png" alt="Logo da Ford" class="logo">
+            
+            <a href="index.html">
+                <img src="img/logo-ford.png" alt="Logo da Ford" class="logo">
+            </a>
+            
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -18,8 +22,9 @@
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
+    
         </div>
-    </header>
+        </header>
 
     <main>
         <section class="video-section">
@@ -32,50 +37,41 @@
             </div>
         </section>
 
-        <section class="gallery-section">
-            <div class="container">
-                <h2>Galeria de Imagens</h2>
-                <div class="gallery">
-                    <img src="img/ranger-1.jpg" alt="Ranger imagem 1">
-                    <img src="img/ranger-2.jpg" alt="Ranger imagem 2">
-                    <img src="img/ranger-3.jpg" alt="Ranger imagem 3">
-                </div>
-            </div>
-        </section>
-
+       
         <section class="comparison-section">
             <div class="container">
                 <h2>Compare os Modelos</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Modelo</th>
-                            <th>Motor</th>
-                            <th>Preço</th>
-                            <th>Selecionar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Ranger XLS 2.2 Diesel 4x2 AT</td>
-                            <td>2.2L Diesel</td>
-                            <td>R$ 235.000</td>
-                            <td><input type="checkbox"></td>
-                        </tr>
-                        <tr>
-                            <td>Ranger XLT 3.2 Diesel 4x4 AT</td>
-                            <td>3.2L Diesel</td>
-                            <td>R$ 289.000</td>
-                            <td><input type="checkbox"></td>
-                        </tr>
-                        <tr>
-                            <td>Ranger Limited 3.2 Diesel 4x4 AT</td>
-                            <td>3.2L Diesel</td>
-                            <td>R$ 319.000</td>
-                            <td><input type="checkbox"></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="model-options">
+                    <div class="model-item">
+                        <img src="img/XL Cabine.jpg" alt="Ranger Cabine Simples">
+                        <div class="option-details">
+                            <input type="checkbox" id="model1" checked>
+                            <label for="model1">XL Cabine Simples 2.2 Diesel 4x2 MT 2022</label>
+                            <img src="img/info.png" alt="Informação" class="exclamation-icon">
+                            <p class="price-info">Preço Sugerido: R$ 195.890</p>
+                        </div>
+                    </div>
+
+                    <div class="model-item">
+                        <img src="img/xls 2.2 diesel.jpg" alt="Ranger XLS">
+                        <div class="option-details">
+                            <input type="checkbox" id="model2">
+                            <label for="model2">XLS 2.2 Diesel 4x2 AT 2022</label>
+                            <img src="img/info.png" alt="Informação" class="exclamation-icon">
+                            <p class="price-info">Preço Sugerido: R$ 235.000</p>
+                        </div>
+                    </div>
+
+                    <div class="model-item">
+                        <img src="img/storm.jpg" alt="Ranger Storm">
+                        <div class="option-details">
+                            <input type="checkbox" id="model3">
+                            <label for="model3">Storm 3.2 Diesel 4x4 AT 2022</label>
+                            <img src="img/info.png" alt="Informação" class="exclamation-icon">
+                            <p class="price-info">Preço Sugerido: R$ 289.000</p>
+                        </div>
+                    </div>
+                </div>
                 <button class="btn-compare">Comparar Carros</button>
             </div>
         </section>
@@ -84,11 +80,12 @@
     <footer>
         <div class="container">
             <div class="social-media">
-                <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
-                <a href="#"><img src="img/youtube-icon.png" alt="Youtube"></a>
+                <a href="https://www.facebook.com/FordBrasil" target="_blank"><img src="img/facebook-50.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/fordbrasil/" target="_blank"><img src="img/instagram-logo-50.png" alt="Instagram"></a>
+                <a href="https://www.youtube.com/@ford" target="_blank"><img src="img/youtube-squared-50.png" alt="Youtube"></a>
             </div>
             <p>&copy; 2023 Ford. Todos os direitos reservados.</p>
+            <img src="img/ford-96.png" alt="Ford" class="footer-logo">
         </div>
     </footer>
 </body>
