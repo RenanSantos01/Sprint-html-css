@@ -10,13 +10,11 @@
 <body>
     <header>
         <div class="header_conteiner">
-
             <div>
                 <a href="index.html">
                     <img src="img/logo-ford-256.png" alt="Logo da Ford" class="logo">
                 </a>
             </div>
-
             <div>
                 <nav>
                     <ul>
@@ -26,57 +24,61 @@
                     </ul>
                 </nav>
             </div>
-
             <div></div>
-
         </div>
     </header>
+
     <main>
         <section class="video-section">
             <div class="container">
                 <h2>Vídeo de Lançamento</h2>
                 <div class="video-container">
-                    <iframe width="1316" height="740" src="https://www.youtube.com/embed/vQsryuNmsL0" title="Ford Ranger 2022 | Gerações" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="1316" height="740" src="https://www.youtube.com/embed/vQsryuNmsL0" title="Ford Ranger 2022 | Gerações" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <p>A nova Ford Ranger chegou para redefinir o conceito de picape. Com mais tecnologia, performance e segurança, ela está pronta para qualquer desafio.</p>
             </div>
         </section>
 
-       
+        <section class="gallery-section">
+            <div class="container">
+                <h2>Conheça os Detalhes</h2>
+                <div class="gallery-images">
+                    <img src="img/XL Cabine.jpg" alt="Visão frontal da Ranger">
+                    <img src="img/xls 2.2 diesel.jpg" alt="Visão lateral da Ranger">
+                    <img src="img/storm.jpg" alt="Visão traseira da Ranger">
+                </div>
+            </div>
+        </section>
+
         <section class="comparison-section">
             <div class="container">
                 <h2>Compare os Modelos</h2>
-                <div class="model-options">
-                    <div class="model-item">
-                        <img src="img/XL Cabine.jpg" alt="Ranger Cabine Simples">
-                        <div class="option-details">
-                            <input type="checkbox" id="model1" checked>
-                            <label for="model1">XL Cabine Simples 2.2 Diesel 4x2 MT 2022</label>
-                            <img src="img/info.png" alt="Informação" class="exclamation-icon">
-                            <p class="price-info">Preço Sugerido: R$ 195.890</p>
-                        </div>
-                    </div>
-
-                    <div class="model-item">
-                        <img src="img/xls 2.2 diesel.jpg" alt="Ranger XLS">
-                        <div class="option-details">
-                            <input type="checkbox" id="model2">
-                            <label for="model2">XLS 2.2 Diesel 4x2 AT 2022</label>
-                            <img src="img/info.png" alt="Informação" class="exclamation-icon">
-                            <p class="price-info">Preço Sugerido: R$ 235.000</p>
-                        </div>
-                    </div>
-
-                    <div class="model-item">
-                        <img src="img/storm.jpg" alt="Ranger Storm">
-                        <div class="option-details">
-                            <input type="checkbox" id="model3">
-                            <label for="model3">Storm 3.2 Diesel 4x4 AT 2022</label>
-                            <img src="img/info.png" alt="Informação" class="exclamation-icon">
-                            <p class="price-info">Preço Sugerido: R$ 289.000</p>
-                        </div>
-                    </div>
-                </div>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Comparar</th>
+                            <th>Modelo</th>
+                            <th>Preço Sugerido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" id="model1"></td>
+                            <td><label for="model1">XL Cabine Simples 2.2 Diesel 4x2 MT 2022</label></td>
+                            <td>R$ 195.890</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="model2"></td>
+                            <td><label for="model2">XLS 2.2 Diesel 4x2 AT 2022</label></td>
+                            <td>R$ 235.000</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" id="model3"></td>
+                            <td><label for="model3">Storm 3.2 Diesel 4x4 AT 2022</label></td>
+                            <td>R$ 289.000</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <button class="btn-compare">Comparar Carros</button>
             </div>
         </section>
@@ -89,7 +91,6 @@
             <a href="https://www.youtube.com/@fordbrasil"><img src="img/youtube-squared-50.png" alt="Logo do YouTube"></a>
             <a href="https://www.instagram.com/fordbrasil/"><img src="img/instagram-logo-50.png" alt="Logo do Instagram"></a>
         </div>
-
         <div class="img-rodape">
             &copy;
             <img src="img/ford-96.png" alt="Logo da Ford">

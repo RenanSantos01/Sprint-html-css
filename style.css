@@ -1,7 +1,7 @@
-/* =================================
-   RESET E CONFIGURAÇÕES GLOBAIS
-   ================================= */
-   * {
+/* 
+    RESET E CONFIGURAÇÕES GLOBAIS
+*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,33 +13,30 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    height: 100%;
     background-color: #fff;
 }
 
 .container {
-    max-width: 1100px;  /* Largura máxima do conteúdo */
-    margin: 0 auto;     /* Centraliza o container na página */
-    padding: 0 20px;    /* Evita que o conteúdo cole nas bordas */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
     width: 100%;
 }
 
 main {
-    flex: 1; /* Garante que o conteúdo principal empurre o rodapé para baixo */
+    flex: 1;
 }
 
-/* =================================
-   HEADER (CABEÇALHO COMUM)
-   ================================= */
+/* 
+    HEADER (CABEÇALHO COMUM)
+*/
 header {
     background-color: #fff;
-    /* padding: 15px 0; */
-    /* border-bottom: 1px solid #e0e0e0; */
     width: 100%;
 }
 
 header .header_conteiner {
-    display: flex; 
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -67,9 +64,9 @@ nav a:hover {
     color: #1351d8;
 }
 
-/* =================================
-   PÁGINA PRINCIPAL (Home)
-   ================================= */
+/* 
+    PÁGINA PRINCIPAL (Home)
+*/
 .banner .principal {
     text-align: center;
     padding-top: 20px;
@@ -88,7 +85,7 @@ nav a:hover {
     color: #0e0d0d;
     border-top: 1px solid #e0e0e0;
     max-width: 90%;
-    margin:  auto; /* Centraliza a legenda */
+    margin: auto;
 }
 
 .banner .principal a {
@@ -97,17 +94,15 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* =================================
-   ESTILOS DAS OUTRAS PÁGINAS
-   ================================= */
-
-/* Página Lançamento */
-.video-section, .comparison-section {
-    padding: 40px 20px 50px 20px;
+/* 
+    PÁGINA LANÇAMENTO
+*/
+.video-section, .gallery-section, .comparison-section {
+    padding: 40px 20px;
     text-align: center;
 }
 
-.video-section h2, .comparison-section h2 {
+.video-section h2, .gallery-section h2, .comparison-section h2 {
     font-size: 2em;
     color: #1b357e;
     margin-bottom: 30px;
@@ -135,40 +130,48 @@ nav a:hover {
     margin: 0 auto;
 }
 
-.model-options {
+/* NOVO: Estilos para a galeria de imagens */
+.gallery-images {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
-.model-item {
-    border: 1px solid #eee;
+.gallery-images img {
+    width: 32%;
     border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+/* NOVO: Estilos para a tabela de comparação */
+.comparison-table {
+    width: 100%;
+    margin: 0 auto 30px auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.comparison-table th, .comparison-table td {
     padding: 15px;
-    width: 30%;
-    min-width: 280px;
+    border: 1px solid #ddd;
 }
 
-.model-item > img {
-    max-width: 100%;
-    margin-bottom: 15px;
+.comparison-table thead {
+    background-color: #f7f7f7;
 }
 
-.option-details {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
+.comparison-table th {
+    font-weight: bold;
+    color: #1b357e;
 }
 
-.exclamation-icon {
-    width: 16px;
-    height: 16px;
-    margin-left: auto;
+.comparison-table td:first-child {
+    text-align: center;
 }
 
-/* Página Contato */
+/* 
+    PÁGINA CONTATO
+*/
 .contact-section {
     padding: 40px 20px;
 }
@@ -208,6 +211,7 @@ form input, form select, form textarea {
     border-radius: 5px;
 }
 
+/* Estilos dos botões */
 .btn-compare, .btn-submit {
     display: inline-block;
     background-color: #1351d8;
@@ -218,28 +222,34 @@ form input, form select, form textarea {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-compare:hover, .btn-submit:hover {
+    background-color: #1b357e;
+    transform: scale(1.05);
 }
 
 .contact-content .btn-submit {
     width: 100%;
 }
 
-/* =================================
-   FOOTER (AJUSTADO PARA O SEU HTML)
-   ================================= */
+/* 
+    FOOTER
+*/
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #1b357e;
     color: #fff;
-    padding: 10px 5%; /* Usa porcentagem para centralizar o conteúdo */
+    padding: 10px 5%;
     margin-top: auto;
 }
 
 footer .redes {
     display: flex;
-    align-items:     center;
+    align-items: center;
     gap: 10px;
 }
 
@@ -262,11 +272,11 @@ footer .img-rodape img {
     height: 45px;
 }
 
-/* =================================
-   RESPONSIVIDADE
-   ================================= */
+/* 
+    RESPONSIVIDADE
+*/
 @media (max-width: 768px) {
-    header .container, footer, .contact-content {
+    header .header_conteiner, footer, .contact-content, .gallery-images {
         flex-direction: column;
         gap: 20px;
         text-align: center;
@@ -276,13 +286,8 @@ footer .img-rodape img {
         padding: 20px 5%;
     }
     
-    .model-options {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .model-item {
-        width: 90%;
+    .gallery-images img {
+        width: 100%; /* Imagens ocupam a largura total em telas menores */
     }
 
     .contact-content img {
